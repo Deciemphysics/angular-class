@@ -43,3 +43,4 @@ function GetTitles(bookProperty) {
     }
     return foundTitles;
 }
+//# sourceMappingURL=tsDay1.js.map
