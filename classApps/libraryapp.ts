@@ -1,5 +1,7 @@
 import { Category } from './enums';
-import { Book, DamageLogger, Author } from "./interfaces";
+import { Book, DamageLogger, Author, Librarian } from "./interfaces";
+import { UniversityLibrarian } from "./classes";
+
 
 function getAllBooks(): Book[] {
     let books = [
@@ -108,6 +110,10 @@ function printBook(book: Book): void {
     console.log(book.title + " by " + book.author);
 }
 
+let favoriteLibrarian: Librarian = new UniversityLibrarian();
+favoriteLibrarian.name = 'Sharon';
+favoriteLibrarian.assistCustomer('Lynda');
+
 //***************************************************************************
 
 let myBook: Book = {
@@ -128,9 +134,9 @@ let logDamage: DamageLogger;
 logDamage = (damage: string) => console.log('Damage reporter: ' + damage);
 logDamage('dog eared and water damaged');
 
-let favoriteAuthor: Author = {
-    
-};
+// let favoriteAuthor: Author = {
+   
+// };
 
 // let hermansBooks = getTitles('Herman Melville');
 let hermansBooks = getTitles(false);

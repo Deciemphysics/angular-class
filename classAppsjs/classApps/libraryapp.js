@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var enums_1 = require("./enums");
+var classes_1 = require("./classes");
 function getAllBooks() {
     var books = [
         { id: 1, title: 'Ulysses', author: 'James Joyce', available: true, category: enums_1.Category.Fiction },
@@ -102,6 +103,9 @@ function getTitles(bookProperty) {
 function printBook(book) {
     console.log(book.title + " by " + book.author);
 }
+var favoriteLibrarian = new classes_1.UniversityLibrarian();
+favoriteLibrarian.name = 'Sharon';
+favoriteLibrarian.assistCustomer('Lynda');
 //***************************************************************************
 var myBook = {
     id: 5,
@@ -117,6 +121,8 @@ var myBook = {
 var logDamage;
 logDamage = function (damage) { return console.log('Damage reporter: ' + damage); };
 logDamage('dog eared and water damaged');
+// let favoriteAuthor: Author = {
+// };
 // let hermansBooks = getTitles('Herman Melville');
 var hermansBooks = getTitles(false);
 hermansBooks.forEach(function (title) { return console.log(title); });
