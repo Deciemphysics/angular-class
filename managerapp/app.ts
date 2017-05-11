@@ -1,5 +1,9 @@
 import { House } from "./interfaces";
 import { Category } from "./enums";
+import * as _ from 'lodash';
+
+let snakeCaseTitle = _.snakeCase("This is some really funky voodoo");
+console.log(snakeCaseTitle);
 
 function getAllHouses(): House[] {
     let houses = [
