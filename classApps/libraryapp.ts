@@ -1,6 +1,6 @@
 import { Category } from './enums';
 import { Book, DamageLogger, Author, Librarian } from "./interfaces";
-import { UniversityLibrarian } from "./classes";
+import { UniversityLibrarian, ReferenceItem, Encyclopedia } from "./classes";
 
 
 function getAllBooks(): Book[] {
@@ -168,3 +168,23 @@ hermansBooks.forEach(title => console.log(title));
 //
 // let myID: string = createCustomerID('daniel', 10); // change argument 10 to a different value each time you try different code above
 // console.log(myID);
+
+// let ref: ReferenceItem = new ReferenceItem('Updated Facts and Figures', 2012);
+
+// ref.printItem();
+// ref.publisher = "Random Data Publishing";
+// console.log(ref.publisher);
+
+// let refBook: ReferenceItem = new Encyclopedia('WorldPedia', 1900, 10);
+// refBook.printCitation();
+
+let Newspaper = class extends ReferenceItem {
+    printCitation(): void {
+        console.log(`Newspaper: ${this.title}`)
+    }
+}
+
+let myPaper = new Newspaper('The Gazette', 2016);
+
+myPaper.printCitation();
+

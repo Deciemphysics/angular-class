@@ -1,4 +1,14 @@
 "use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
 Object.defineProperty(exports, "__esModule", { value: true });
 var enums_1 = require("./enums");
 var classes_1 = require("./classes");
@@ -147,5 +157,23 @@ hermansBooks.forEach(function (title) { return console.log(title); });
 // IdGenerator = (name: string, id: number) => { return id + name; };
 //
 // let myID: string = createCustomerID('daniel', 10); // change argument 10 to a different value each time you try different code above
-// console.log(myID); 
+// console.log(myID);
+// let ref: ReferenceItem = new ReferenceItem('Updated Facts and Figures', 2012);
+// ref.printItem();
+// ref.publisher = "Random Data Publishing";
+// console.log(ref.publisher);
+// let refBook: ReferenceItem = new Encyclopedia('WorldPedia', 1900, 10);
+// refBook.printCitation();
+var Newspaper = (function (_super) {
+    __extends(class_1, _super);
+    function class_1() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    class_1.prototype.printCitation = function () {
+        console.log("Newspaper: " + this.title);
+    };
+    return class_1;
+}(classes_1.ReferenceItem));
+var myPaper = new Newspaper('The Gazette', 2016);
+myPaper.printCitation();
 //# sourceMappingURL=libraryapp.js.map
