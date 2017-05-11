@@ -1,6 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var enums_1 = require("./enums");
+var _ = require("lodash");
+var snakeCaseTitle = _.snakeCase("This is some really funky voodoo");
+console.log(snakeCaseTitle);
 function getAllHouses() {
     var houses = [
         { address: '1376 N 300 E', rooms: 4, baths: 2, sqft: 2500, available: false, category: enums_1.Category.TwoStory },

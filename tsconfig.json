@@ -5,6 +5,7 @@
         "sourceMap": true,
         "outDir": "classAppsjs/",
         "watch": true,
-        "allowJs": true
+        "allowJs": true,
+        "experimentalDecorators": true
     }
 }
